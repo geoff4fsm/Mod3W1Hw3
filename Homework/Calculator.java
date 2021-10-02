@@ -3,62 +3,41 @@ import java.util.Scanner;
 
 public class Calculator {
 	
-	public static void add() {
-		double x, y;
-		System.out.println("Enter numbers to be added ");
-		Scanner input = new Scanner(System.in);
-	
-			x = input.nextDouble();
-			y = input.nextDouble();
+	public static void add(double num1, double num2) {
 
-			double sum = x + y ;
-			System.out.println(x + " + " + y + " = " + sum);
-			input.close();
+			double sum = num1 + num2 ;
+			System.out.println(num1 + " + " + num2 + " = " + sum);
+
 	}
 	
-	public static void subtract() {
-		double x,y;
-		System.out.println("Enter numbers to be subtracted");
-		Scanner input = new Scanner(System.in);
-			x = input.nextDouble();
-			y = input.nextDouble();
-			
-			double difference = x - y;
-			System.out.println(x + " - " + y + " = " + difference);
-			input.close();
+	public static void subtract(double num1, double num2) {
+
+			double difference = num1 - num2;
+			System.out.println(num1 + " - " + num2 + " = " + difference);
+
 	}
 	
-	public static void multiply() {
-		double x,y;
-		System.out.println("Enter numbers to be multiplied");
-		Scanner input = new Scanner(System.in);
-			x = input.nextDouble();
-			y = input.nextDouble();
+	public static void multiply(double num1, double num2) {
 			
-			double product = x * y;
-			System.out.println(x + " * " + y + " = " + product);
-			input.close();
+			double product = num1 * num2;
+			System.out.println(num1 + " * " + num2 + " = " + product);
+
 	}
 	
-	public static void divide() {
-		double x,y;
-		System.out.println("Enter numbers to be divided");
-		Scanner input = new Scanner(System.in);
-			x = input.nextDouble();
-			y = input.nextDouble();
+	public static void divide(double num1, double num2) {
 			
-			if ( y != 0 ) {
-				double quotient = x / y;
-				System.out.println(x + " / " + y + " = " + quotient);
+			if ( num2 != 0 ) {
+				double quotient = num1 / num2;
+				System.out.println(num1 + " / " + num2 + " = " + quotient);
 			}
 			else System.out.println("cannot divide by 0");	
-			input.close();
+
 	}
 	
 	public static void main(String[] args) {
 		
 		char operator = ' ';
-		
+		double x, y;
 		while (operator != '#') {
 			
 		Scanner input = new Scanner(System.in);		
@@ -69,28 +48,46 @@ public class Calculator {
 					case '#' : 
 						break;
 			
-					case '+' :				
-						add();
+					case '+' :
+						
+						System.out.println("Enter numbers to be added ");					
+							x = input.nextDouble();
+							y = input.nextDouble();
+							
+						add(x, y);
 						break;
 				
 					case '-' :
-						subtract();
+
+						System.out.println("Enter numbers to be subtracted ");					
+							x = input.nextDouble();
+							y = input.nextDouble();
+							
+						subtract(x, y);
 						break;
 				
 					case '*' :
-						multiply();
+						
+						System.out.println("Enter numbers to be multiplied ");					
+						x = input.nextDouble();
+						y = input.nextDouble();
+						multiply(x, y);
 						break;
 				
 					case '/' :
-						divide();
+						
+						System.out.println("Enter numbers to be divided ");					
+						x = input.nextDouble();
+						y = input.nextDouble();
+						divide(x, y);
 						break;
 				
 					default :
 						System.out.println("undefined operator");
 				}
-			input.close();
+// input.close();
 		}
-		
+					
 	}
 
 }
