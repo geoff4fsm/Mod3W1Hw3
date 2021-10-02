@@ -38,8 +38,10 @@ public class Calculator {
 		
 		char operator = ' ';
 		double x, y;
+		
 		while (operator != '#') {
 			
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);		
 		System.out.println("Enter operation to be performed ( + , - , * , / ) or # to exit");
 			operator = input.next().charAt(0);
@@ -85,10 +87,7 @@ public class Calculator {
 					default :
 						System.out.println("undefined operator");
 				}
-// input.close();
-		}
-					
+		}					
 	}
-
 }
 
