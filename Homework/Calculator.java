@@ -85,7 +85,7 @@ public class Calculator {
 						break;
 				
 					default :
-						System.out.println("undefined operator");
+						System.out.println("undefined operator, try again");
 				}
 		}					
 	}
