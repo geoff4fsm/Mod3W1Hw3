@@ -115,11 +115,10 @@ public class Calculator {
 									else System.out.println("Cannot divide by 0, Try again ");
 						break;
 							
-							// 
+							// default for undefined operator
 						default :
 							System.out.println("Undefined operator, Try again");
 					}
 			}					
 	}
 }
-
